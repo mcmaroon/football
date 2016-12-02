@@ -1,0 +1,137 @@
+.football {
+  display: table;
+}
+.football > div {
+  display: table-row;
+}
+.football > div > div {
+  display: table-cell;
+}
+.football .point {
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  width: 61px;
+  height: 61px;
+}
+.football .point-line {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 61px;
+  height: 3px;
+  background-color: #d9534f;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+.football .point-line[data-deg="0"] {
+  width: 84px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.football .point-line[data-deg="1"] {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.football .point-line[data-deg="2"] {
+  width: 84px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.football .point-line[data-deg="3"] {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.football .point-line[data-deg="4"] {
+  width: 84px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.football .point-line[data-deg="5"] {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.football .point-line[data-deg="6"] {
+  width: 84px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.football .point-line[data-deg="7"] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.football .position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-size: 12px;
+  width: 61px;
+  height: 61px;
+}
+.football .bit[data-id] {
+  font-size: 12px;
+  text-align: center;
+  color: #d9534f;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+.football .bit[data-id][data-id="0"] {
+  top: 4px;
+  left: 4px;
+}
+.football .bit[data-id][data-id="1"] {
+  top: 4px;
+  left: 50%;
+}
+.football .bit[data-id][data-id="2"] {
+  top: 4px;
+  right: 4px;
+}
+.football .bit[data-id][data-id="3"] {
+  top: 50%;
+  right: 4px;
+  margin-top: -6px;
+}
+.football .bit[data-id][data-id="4"] {
+  bottom: 4px;
+  right: 4px;
+  margin-bottom: 6px;
+}
+.football .bit[data-id][data-id="5"] {
+  bottom: 4px;
+  left: 50%;
+  margin-bottom: 6px;
+}
+.football .bit[data-id][data-id="6"] {
+  bottom: 4px;
+  left: 4px;
+  margin-bottom: 6px;
+}
+.football .bit[data-id][data-id="7"] {
+  top: 50%;
+  left: 4px;
+  margin-top: -6px;
+}
+/*# sourceMappingURL=football.css.map */

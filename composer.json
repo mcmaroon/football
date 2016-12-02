@@ -1,0 +1,21 @@
+{
+    "name": "mcmaroon/football",
+    "description": "A simple PHP Football Game",
+    "keywords": ["game"],
+    "homepage": "https://github.com/mcmaroon/football",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mcmaroon"
+        }
+    ],
+    "require-dev": {
+        "php": ">=5.5.0",
+        "symfony/console": "~2.6|~3.0",
+        "monolog/monolog": "^1.17"
+    },
+    "autoload": {
+        "psr-0": { "Football\\": "src" },
+        "psr-4": { "Cli\\": "src/Cli/" }
+    }
+}
