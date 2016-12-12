@@ -146,7 +146,7 @@ class Football {
 
     // ~
 
-    public function setCurrentUser() {
+    private function setCurrentUser() {
         if ((boolean) (count($this->getPoints()) % 2) === true) {
             $this->currentUser = self::USER_SECOND;
         } else {
