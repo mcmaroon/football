@@ -58,6 +58,7 @@ class Football {
     private $points = array();
     private $reflection = false;
     private $currentUser = self::USER_FIRST;
+    private $previewUser = null;
 
     /**
      *
@@ -152,6 +153,22 @@ class Football {
         } else {
             $this->currentUser = self::USER_FIRST;
         }
+
+        if ($this->getReflection() && !is_null($this->previewUser)) {
+            $this->currentUser = $this->previewUser;
+        }
+
+        if (!$this->getReflection() && $this->currentUser === $this->previewUser) {
+            if ($this->currentUser === self::USER_FIRST) {
+                $currentUser = self::USER_SECOND;
+            }
+            if ($this->currentUser === self::USER_SECOND) {
+                $currentUser = self::USER_FIRST;
+            }
+            $this->currentUser = $currentUser;
+        }
+
+        $this->previewUser = $this->currentUser;
     }
 
     // ~
@@ -207,9 +224,6 @@ class Football {
         if (false == substr_count($allOccupiedBin, '0')) {
             throw new FootballException(FootballException::ALL_PLACE_OCCUPIED);
         }
-
-        $this->setReflection($end);
-        $this->setCurrentUser();
     }
 
     // ~
@@ -290,6 +304,8 @@ class Football {
         $lastPoint = $this->getLastPoint();
         if (is_numeric($dir = $this->getDirection($lastPoint, $point))) {
             $this->setBoardByte($dir, $lastPoint, $point);
+            $this->setReflection($point);
+            $this->setCurrentUser();
             $this->addPoint($point);
             $this->checkGameEnd();
         }
