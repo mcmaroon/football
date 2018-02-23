@@ -1,12 +1,13 @@
 {
     "name": "mcmaroon/football",
-    "description": "A simple PHP Football Game",
-    "keywords": ["game"],
+    "description": "A simple football game",
+    "keywords": ["php", "game"],
     "homepage": "https://github.com/mcmaroon/football",
     "license": "MIT",
     "authors": [
         {
-            "name": "mcmaroon"
+            "name": "mcmaroon",
+            "email": "mcmaroonmc@gmail.com"
         }
     ],
     "require-dev": {
